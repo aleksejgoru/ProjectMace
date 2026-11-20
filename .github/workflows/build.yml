@@ -22,6 +22,8 @@ jobs:
         run: |
           wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip
           unzip -q gradle-8.7-bin.zip
+          chmod +x gradle-8.7/bin/gradle
+          ls -la gradle-8.7/bin/
           
       - name: Build with Gradle
         run: ./gradle-8.7/bin/gradle build --no-daemon
