@@ -20,13 +20,12 @@ jobs:
 
       - name: Download Gradle Manually
         run: |
-          wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip
-          unzip -q gradle-8.7-bin.zip
-          chmod +x gradle-8.7/bin/gradle
-          ls -la gradle-8.7/bin/
+          wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip
+          unzip -q gradle-8.9-bin.zip
+          chmod +x gradle-8.9/bin/gradle
           
       - name: Build with Gradle
-        run: ./gradle-8.7/bin/gradle build --no-daemon
+        run: ./gradle-8.9/bin/gradle build --no-daemon
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
